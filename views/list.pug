@@ -1,0 +1,5 @@
+extends layout
+
+block content
+	- for(var i in solutions)
+	<div class='freshman' data-index='=i'><input type='checkbox'><span>=solutions[i]</span></div>
