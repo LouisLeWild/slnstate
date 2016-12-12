@@ -1,5 +1,11 @@
 extends layout
 
 block content
-	- for(var i in solutions)
-	<div class='freshman' data-index='=i'><input type='checkbox'><span>=solutions[i]</span></div>
+	each val, index in solutions
+		div(class='freshman' data-index=index)
+			input(type='checkbox')
+			span 
+				=val
+
+block code
+	script(src='/javascripts/site.js')
